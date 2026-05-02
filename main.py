@@ -1,13 +1,7 @@
-import random
-aboutMe_facts = [
-    "Я человек.",
-    "Я умею дышать.",
-    "Я могу ходить.",
-    "У меня прекрасное настроение.",
-    "Мое хобби это кодить.",
-    "Для меня милыйпитомец это шиншила.",
-    "У меня из питона самый крутой проект это крестики-нолики,часы,калькулятор и не доделанное шахматное поле.",
-    "Мне нравится макароны по флотцки.",]
-random_fact = random.choice(aboutMe_facts)
-print("Интересный факт обо мне:")
-print(random_fact)
+simvols =  "+-/*!&$#?=@abcdefghijklnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890"
+generated_password = ""
+password_len = int(input("Введите длину пароля: "))
+for _ in range(password_len):
+    random_char = random.choice(simvols)
+    generated_password += random_char
+print("Сгенерированный пароль:", generated_password)
